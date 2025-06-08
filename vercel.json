@@ -1,0 +1,14 @@
+{
+    "builds": [
+        {
+            "src": "src/localization_management_api/main.py",
+            "use": "@vercel/python"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "src/localization_management_api/main.py"
+        }
+    ]
+}

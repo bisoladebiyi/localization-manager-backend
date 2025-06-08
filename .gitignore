@@ -47,3 +47,4 @@ __pydantic__/  # if using compiled models
 # Uvicorn reload artifacts (optional)
 *.pid
 .env
+.vercel

@@ -64,6 +64,10 @@ def deep_serialize(data):
 
 
 # ENDPOINT 
+@app.get("/")
+def root():
+    return {"message": "Welcome to the Localization Management API!"}
+
 @app.get("/api/localizations")
 def get_localizations():
     response = supabase.table("localizations").select("*").execute()
