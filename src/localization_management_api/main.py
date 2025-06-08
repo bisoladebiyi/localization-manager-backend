@@ -73,7 +73,7 @@ def root():
 def get_localizations():
     response = supabase.table("localizations").select("*").execute()
     if not response.data:
-        raise HTTPException(status_code=404, detail="No localizations found")
+        return []
     return response.data
 
 @app.get("/api/localizations/{id}")
