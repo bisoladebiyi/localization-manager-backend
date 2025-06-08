@@ -34,6 +34,7 @@ pip install -r src.localization_management_api.requirements.txt
 Create your `.env` file in root folder
 
 ```bash
+ALLOWED_ORIGINS=allowed-origin-one,allowed-origin-two
 SUPABASE_URL=https://your-project.supabase.co
 SUPABASE_KEY=your-service-role-key
 ```
