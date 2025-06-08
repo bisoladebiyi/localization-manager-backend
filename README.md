@@ -26,7 +26,7 @@ This is the backend API for the Localization Manager, built with **FastAPI** and
 git clone https://github.com/bisoladebiyi/localization-manager-backend.git
 python -m venv venv
 source venv/bin/activate
-pip install -r requirements.txt
+pip install -r src.localization_management_api.requirements.txt
 ```
 
 ## Running the server
