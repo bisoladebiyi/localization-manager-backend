@@ -13,6 +13,7 @@ load_dotenv()
 # Supabase setup 
 SUPABASE_URL = os.getenv("SUPABASE_URL")
 SUPABASE_API_KEY = os.getenv("SUPABASE_API_KEY")
+origins = os.getenv("ALLOWED_ORIGINS", "").split(",")
 SUPABASE_TABLE = "localizations"
 
 supabase: Client = create_client(SUPABASE_URL, SUPABASE_API_KEY)
@@ -40,8 +41,8 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
-    allow_credentials=False,
+    allow_origins=origins,
+    allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"]
 )
