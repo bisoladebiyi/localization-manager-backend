@@ -1,4 +1,3 @@
-.env
 .env*
 __pycache__/
 *.py[cod]
@@ -47,3 +46,4 @@ __pydantic__/  # if using compiled models
 
 # Uvicorn reload artifacts (optional)
 *.pid
+.env
